@@ -2,7 +2,8 @@
 
 ### 字符串（String） ###
 
-1. 字符串是通过一个`char[]`数组实现的，内部定义的`private final char[]`字段，以及没有任何修改`char[]`的方法实现决定了`String`字符串是不可变的。
+1. 字符串是通过一个`char[]`数组实现的，内部定义的`private final char[]`字段，  
+以及没有任何修改`char[]`的方法实现决定了`String`字符串是不可变的。
 
 2. 字符串的比较
 
@@ -69,13 +70,12 @@
 
 5.较老版本的JDK的String总是以char[]存储的，它的定义如下:
 
-    ```java
+```Java
 public final class String {
     private final char[] value;
     private final int offset;
     private final int count;
-}
-    ```
+}```
 
 ​	较新版本的JDK的String则以Byte[],如果每个`byte`存储一个字符串，否则，每两个`byte`存储一个字符串，这样就可以节省内存，因为大量长度较短的String通常只包含ASCII字符：
 
