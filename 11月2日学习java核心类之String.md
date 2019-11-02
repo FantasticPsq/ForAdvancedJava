@@ -70,20 +70,20 @@
 
 5.较老版本的JDK的String总是以char[]存储的，它的定义如下:
 
-```Java
+``` Java
 public final class String {
     private final char[] value;
     private final int offset;
     private final int count;
-}```
+} ```
 
-​	较新版本的JDK的String则以Byte[],如果每个`byte`存储一个字符串，否则，每两个`byte`存储一个字符串，这样就可以节省内存，因为大量长度较短的String通常只包含ASCII字符：
+较新版本的JDK的String则以Byte[],如果每个`byte`存储一个字符串，  
+否则，每两个`byte`存储一个字符串，这样就可以节省内存，因为大量长度较短的String通常只包含ASCII字符：
 
-```java
+``` java
 public final class String {
     private final byte[] value;
-    private final byte coder; // 0 = LATIN1, 1 = UTF16
-```
+    private final byte coder; // 0 = LATIN1, 1 = UTF16 ```
 
 6. 字符类String总结
 
