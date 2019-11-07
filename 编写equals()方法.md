@@ -30,7 +30,7 @@
    }
    ```
 
-   因此，要正确使用`List`的`contains()`或者`indexOf()`等方法，就必须正确重写`equals()`方法。而`Java`标准库类都已经正确实现`equals()`方法。但是非标准类就要自己实现`equals()`方法了。
+   因此，要正确使用`List`的`contains()`或者`indexOf()`等方法，或者作为`Map`的`Key`对象（此时还要重写`hashCode()`方法_,后面将学习)，就必须正确重写`equals()`方法。而`Java`标准库类都已经正确实现`equals()`方法。但是非标准类就要自己实现`equals()`方法了。
 
 2. 如何正确编写`equals()`方法：
 
