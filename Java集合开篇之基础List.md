@@ -45,7 +45,7 @@
 
       但是这种方法并不推荐，一是因为代码复杂，而是因为`get(int)`只有`ArrayList`的实现是高效的，对于`LinkedList`来说，索引越大，访问速度越慢。
 
-      所以，我们要始终使用__迭代器`Iterator`__来访问`List`.`Iterator`本身是一个对象，但它是由`List`的实例调用`iterator`方法时创建的。
+      所以，我们要始终使用__ 迭代器`Iterator` __ 来访问`List`.`Iterator`本身是一个对象，但它是由`List`的实例调用`iterator`方法时创建的。
 
       `Iterator`有两个方法:`boolean hasNext()`判断是否有下一个元素，`E next()`返回下一个元素：
 
@@ -120,7 +120,7 @@
          Integer[] array = list.toArray(Integer[]::new);
          ```
 
-   2. 把数组变为`List`方法就是`List.of()`。对于`JDK 11`之前的版本，可以使用`Arrays.asList(T...)`方法。需要注意的是，返回`List`不一定就是`ArrayLIst`或者`LinkedList`,因为`List`只是一个接口，如果我们调用`List.of()`,它返回的是一个只读的`List`，__对只读的`List`调用`add(),remove()`方法会抛出`UnsupportedOperationException`。
+   2. 把数组变为`List`方法就是`List.of()`。对于`JDK 11`之前的版本，可以使用`Arrays.asList(T...)`方法。需要注意的是，返回`List`不一定就是`ArrayLIst`或者`LinkedList`,因为`List`只是一个接口，如果我们调用`List.of()`,它返回的是一个只读的`List`，对只读的`List`调用`add(),remove()`方法会抛出`UnsupportedOperationException`。
 
    
 
